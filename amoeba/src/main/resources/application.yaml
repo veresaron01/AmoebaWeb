@@ -1,0 +1,73 @@
+
+server:
+  port: 8080
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+spring:
+  sql:
+    init:
+      mode: always
+  datasource:
+    url: jdbc:mysql://localhost:3307/amoeba_db?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8
+    username: root
+    password: test1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    CURRENCY_RATE_URL: http://data.fixer.io/api/latest?
+    API_KEY: access_key=c05c53b9eec4dbbf736a3c55ed4c42f4
+    EMAIL_ADDRESS: fundraiser.project.progmasters@gmail.com
+    CODE_LENGTH: 6
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+    generate-ddl: true
+#  mail:
+#    host: smtp.gmail.com
+#    port: 587
+#    username: fundraiser.project.progmasters@gmail.com
+#    #    password: APR21FUND-8
+#    password: eigzbhkbxwpxtaxs
+#    protocol: smtp
+#    properties.mail.smtp:
+#      auth: true
+#      starttls.enable: true
+#      starttls.required: true
+#  thymeleaf:
+#    cache: false
+#    enabled: true
+#    prefix: classpath:/public/
+#    suffix: .html
+logging:
+  level:
+    hu.progmasters: debug
+    org.springframework.web: info
+    org.hibernate: error
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
+cors-policies: http://localhost:4200, http://127.0.0.1:4200,http://127.0.0.0:4200, http://localhost:8080, http://localhost:8080/api/accounts
+serverUrl: http://localhost:8080
+
+#cloudinary:
+#  cloud_name: dpg3mzpr4
+#  api_key: 173854821167723
+#  api_secret: Jv1alpLOcfXz9yXo1vXnGRggdtg
+#
+#fundraiser:
+#  basic-balance: 5000
+#  EMAIL_ADDRESS: fundraiser.project.progmasters@gmail.com
+#  LINK_BASE_URL: http://localhost:4200
+#  CODE_LENGTH: 6
+#
+#EXCHANGE_RATE:
+#  CURRENCY_RATE_URL: http://data.fixer.io/api/latest?
+#  API_KEY: access_key=40ed5fa11ef4d61b0647f051a9967dde
