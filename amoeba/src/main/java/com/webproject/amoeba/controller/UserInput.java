@@ -20,20 +20,20 @@ public class UserInput {
     }
 
     public int getStepInput(int reg) throws IOException {
-        String regex = "[1-" + reg + "]";
-        String inputChar = null;
-        System.out.println(regex);
+        String maxNum = "[1-" + reg + "]";
+        String inputString = null;
+        System.out.println(maxNum);
 
         boolean b = true;
         while (b) {
-            int val = (Integer.valueOf(inputChar = getInputFromConsole()));
+            int val = (Integer.valueOf(inputString = getInputFromConsole()));
             if (val <= reg && val >= 1) {
                 break;
             }
 
             System.out.println("Number from 1 - " + reg);
         }
-        int result = Integer.parseInt(inputChar);
+        int result = Integer.parseInt(inputString);
 
         return result;
     }

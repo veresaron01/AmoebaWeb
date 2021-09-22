@@ -1,7 +1,12 @@
 package com.webproject.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.List;
 
+@Entity
+@Table(name = "game_table")
 public class GameTable {
 
     private Long id;
@@ -16,4 +21,14 @@ public class GameTable {
 
     private List<Point> steps;
 
+
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    @Id
+    public Long getId() {
+        return id;
+    }
 }
