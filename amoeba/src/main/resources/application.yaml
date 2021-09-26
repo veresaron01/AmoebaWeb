@@ -16,13 +16,14 @@ spring:
     username: root
     password: test1234
     driver-class-name: com.mysql.cj.jdbc.Driver
-    security:
-      oauth2:
-        client:
-          registration:
-            google:
-              client-id: <your client id>
-              client-secret: <your client secret>
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+#           elirva direkt
+            client-id: 7532759370619-aui2nstvosqf5dovs0ms90iralg70u0u.apps.googleusercontent.com
+            client-secret: j585JiB2LhFdj2efaV9nYLXeF
 
   jpa:
     hibernate:
