@@ -32,8 +32,17 @@ public class PlayerController {
         model.addAttribute("clientName", authorizedClient.getClientRegistration().getClientName());
         model.addAttribute("userAttributes", oauth2User.getAttributes());
 
-        return "userName: " + model.getAttribute("userName") + model.getAttribute("clientName") + model.getAttribute("userAttributes")
-                ;
+        return "userName: " + model.getAttribute("userName") + model.getAttribute("clientName") + model.getAttribute("userAttributes");
+
+    }
+
+    @GetMapping("2")
+    public String index2(Model model, @RegisteredOAuth2AuthorizedClient OAuth2AuthorizedClient authorizedClient, @AuthenticationPrincipal OAuth2User oauth2User) {
+        model.addAttribute("userName", oauth2User.getName());
+        model.addAttribute("clientName", authorizedClient.getClientRegistration().getClientName());
+        model.addAttribute("userAttributes", oauth2User.getAttributes());
+
+        return "222userName: " + model.getAttribute("userName") + model.getAttribute("clientName") + model.getAttribute("userAttributes");
 
     }
 }

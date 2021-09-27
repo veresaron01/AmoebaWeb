@@ -17,7 +17,7 @@ public class ConsoleTexts {
     }
 
     public void printWrongFieldDimensionSizes() {
-        System.out.println("Choose dimension sizes (4-8)!\n First: a number for height + enter \n Second: a number for width + enter");
+        System.out.println("Choose dimension sizes (4-16)!\n First: a number for height + enter \n Second: a number for width + enter");
     }
 
     public static void printWhichPlayerChooses(int XO12) {

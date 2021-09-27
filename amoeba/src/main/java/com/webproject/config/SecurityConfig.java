@@ -14,4 +14,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .oauth2Login();
     }
+
+//    @Override
+//    protected void configure(HttpSecurity http) throws Exception {
+//        http.authorizeRequests()
+//                .antMatchers("/oauth_login")
+//                .permitAll()
+//                .anyRequest()
+//                .authenticated()
+//                .and()
+//                .oauth2Login()
+//                .loginPage("/oauth_login");
+//    }
 }

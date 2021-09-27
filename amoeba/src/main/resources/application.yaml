@@ -22,8 +22,8 @@ spring:
         registration:
           google:
 #           elirva direkt
-            client-id: 7532759370619-aui2nstvosqf5dovs0ms90iralg70u0u.apps.googleusercontent.com
-            client-secret: j585JiB2LhFdj2efaV9nYLXeF
+            client-id: 732759370619-aui2nstvosqf5dovs0ms90iralg70u0u.apps.googleusercontent.com
+            client-secret: j85JiB2LhFdj2efaV9nYLXeF
 
   jpa:
     hibernate:
