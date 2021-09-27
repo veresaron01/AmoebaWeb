@@ -21,9 +21,8 @@ spring:
       client:
         registration:
           google:
-#           elirva direkt
-            client-id: 732759370619-aui2nstvosqf5dovs0ms90iralg70u0u.apps.googleusercontent.com
-            client-secret: j85JiB2LhFdj2efaV9nYLXeF
+#           credentials törölve a github public repo miatt
+
 
   jpa:
     hibernate:
